@@ -69,6 +69,7 @@ $secondary-content-color: #E6EDE3;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
         
         div {
             border-bottom: solid .1rem rgba($color: #000000, $alpha: 0.9);

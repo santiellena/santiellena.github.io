@@ -83,6 +83,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 .main__content--presentation .main__content--nav div {

@@ -45,7 +45,7 @@ $font-color: #000000;
 
         h3 {
             font-size: 3.2rem;
-            margin: 1.2rem 0;
+            margin: 1rem 0;
             font-weight: 300;
         }
 
@@ -69,3 +69,6 @@ $font-color: #000000;
     margin-top: 2.2rem;
 }
 
+.in-process {
+    color: red;
+}
