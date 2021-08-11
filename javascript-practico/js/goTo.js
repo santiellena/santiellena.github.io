@@ -1,4 +1,5 @@
 const figuresPage = document.getElementById('figuresPage');
+const percentagesPage = document.getElementById('percentagesPage');
 
 const goToFiguresPage = () => {
 
@@ -9,4 +10,14 @@ const goToFiguresPage = () => {
 figuresPage.addEventListener('click', () => {
 
     goToFiguresPage();
+})
+
+const goToPercentagesPage = () => {
+    document.location.target = "_self";
+    document.location.href='./percentages.html';
+}; 
+
+percentagesPage.addEventListener('click', () => {
+
+    goToPercentagesPage();
 })
