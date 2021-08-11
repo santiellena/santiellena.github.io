@@ -26,209 +26,160 @@ let onlyOne = 0;
 
 buttonRectangle.addEventListener("click", () => {
   if (onlyOne == 0) {
-
     if (booleanRectangle == 0) {
-      rectangleContent1.classList.toggle("go-down1-rectangle");
 
-      elypse.classList.toggle("go-rest-down");
-      cube.classList.toggle("go-rest-down");
-      polygon.classList.toggle("go-rest-down");
-
-      setTimeout(() => {
-        rectangleContent2.classList.toggle("go-down2-rectangle");
-      }, 500);
-
-      booleanRectangle = 1;
-      onlyOne = 1;
+      openRectangle();
     }
 
-    buttonRectangle.classList.toggle("rotateButton");
 
   } else if (onlyOne == 1 && booleanRectangle == 1) {
-
-    const valueLado = document.getElementById('rectangle-lado').value = undefined;
-    const valueBase = document.getElementById('rectangle-base').value = undefined;
-    const resultPerimeter = document.getElementById('rectangle-result-perimeter').innerText = '';
-    const resultArea = document.getElementById('rectangle-result-area').innerText = '';
-
-    rectangleContent2.classList.toggle("go-down2-rectangle");
-
-      setTimeout(() => {
-        rectangleContent1.classList.toggle("go-down1-rectangle");
-
-        elypse.classList.toggle("go-rest-down");
-        cube.classList.toggle("go-rest-down");
-        polygon.classList.toggle("go-rest-down");
-      }, 500);
-
-      booleanRectangle = 0;
-      onlyOne = 0;
-      buttonRectangle.classList.toggle("rotateButton");
+    
+    closeRectangle();
 
   } else {
-      const title = document.getElementById('rectangle-title');
-      title.innerText = 'Cierre la otra calculadora';
-      title.classList.toggle('color-red');
+    if (booleanElypse == 1) {
+
+      closeElypse();
 
       setTimeout(() => {
-        title.innerText = 'Calculadora de Rectángulos';
-        title.classList.toggle('color-red');
 
-      }, 1500);
+        openRectangle();
+      }, 500);
+
+    } else if (booleanPolygon == 1) {
+      closePolygon();
+
+      setTimeout(() => {
+
+        openRectangle();
+      }, 500);
+    } else if (booleanCube == 1) {
+
+      closeCube();
+
+      setTimeout(() => {
+
+        openRectangle();
+      }, 500);
+
+    }
   }
-
- 
 });
 
 buttonElypse.addEventListener("click", () => {
-    if(onlyOne == 0){
-        if (booleanElypse == 0) {
-            elypseContent1.classList.toggle("go-down1-elypse");
-        
-            cube.classList.toggle("go-rest-down");
-            polygon.classList.toggle("go-rest-down");
-        
-            setTimeout(() => {
-              elypseContent2.classList.toggle("go-down2-elypse");
-            }, 500);
-        
-            booleanElypse = 1;
-            onlyOne = 1;
-        }
+  if (onlyOne == 0) {
+    if (booleanElypse == 0) {
 
-        buttonElypse.classList.toggle("rotateButton");
-
-    } else if(onlyOne == 1 && booleanElypse == 1){
-
-      const elypseRadio = document.getElementById('elypse-radio').value = undefined;
-
-      const resultPerimeter = document.getElementById('elypse-result-perimeter').innerText = '';
-      const resultArea = document.getElementById('elypse-result-area').innerText = '';
-      const resultDiametro = document.getElementById('elypse-result-diametro').innerText = '';
-
-        elypseContent2.classList.toggle("go-down2-elypse");
-        
-            setTimeout(() => {
-              elypseContent1.classList.toggle("go-down1-elypse");
-        
-              cube.classList.toggle("go-rest-down");
-              polygon.classList.toggle("go-rest-down");
-            }, 500);
-        
-            booleanElypse = 0;
-            onlyOne = 0;
-            buttonElypse.classList.toggle("rotateButton");
-
-    } else {
-        const title = document.getElementById('elypse-title');
-        title.innerText = 'Cierre la otra calculadora';
-        title.classList.toggle('color-red');
-
-        setTimeout(() => {
-            title.innerText = 'Calculadora de Circunferencias';
-            title.classList.toggle('color-red');
-
-        }, 1500);
+      openElypse();
     }
-  
+
+  } else if (onlyOne == 1 && booleanElypse == 1) {
+
+    closeElypse();
+  } else {
+    if(booleanRectangle == 1){
+
+      closeRectangle();
+
+      setTimeout(() => {
+
+        openElypse();
+      }, 500);
+    } else if (booleanPolygon == 1) {
+
+      closePolygon();
+
+      setTimeout(() => {
+
+        openElypse();
+      }, 500);
+    } else if (booleanCube == 1) {
+
+       closeCube();
+
+       setTimeout(() => {
+
+        openElypse();
+      }, 500);
+    }
+  }
 });
 
 buttonPolygon.addEventListener("click", () => {
-  if(onlyOne == 0){
-      if (booleanPolygon == 0) {
-          polygonContent1.classList.toggle("go-down1-polygon");
-      
-          cube.classList.toggle("go-rest-down");
-      
-          setTimeout(() => {
-            polygonContent2.classList.toggle("go-down2-polygon");
-          }, 500);
-      
-          booleanPolygon = 1;
-          onlyOne = 1;
-      }
+  if (onlyOne == 0) {
+    if (booleanPolygon == 0) {
 
-      buttonPolygon.classList.toggle("rotateButton");
+      openPolygon();
+    }
 
-  } else if(onlyOne == 1 && booleanPolygon == 1){
+  } else if (onlyOne == 1 && booleanPolygon == 1) {
 
-    const polygonLado = document.getElementById('polygon-lado').value = undefined;
-    const polygonBase = document.getElementById('polygon-base').value = undefined;
-
-    const resultPerimeter = document.getElementById('polygon-result-perimeter').innerText = '';
-    const resultHigh = document.getElementById('polygon-result-high').innerText = '';
-    const resultArea = document.getElementById('polygon-result-area').innerText = '';
-    
-      polygonContent2.classList.toggle("go-down2-polygon");
-      
-          setTimeout(() => {
-            polygonContent1.classList.toggle("go-down1-polygon");
-      
-            cube.classList.toggle("go-rest-down");
-          }, 500);
-      
-          booleanPolygon = 0;
-          onlyOne = 0;
-          buttonPolygon.classList.toggle("rotateButton");
-
+    closePolygon();
   } else {
-      const title = document.getElementById('polygon-title');
-      title.innerText = 'Cierre la otra calculadora';
-      title.classList.toggle('color-red');
+    if(booleanRectangle == 1) {
+
+      closeRectangle();
 
       setTimeout(() => {
-          title.innerText = 'Calculadora de Triángulos';
-          title.classList.toggle('color-red');
 
-      }, 1500);
+        openPolygon();
+      }, 500);
+    } else if (booleanElypse == 1) {
+
+      closeElypse();
+
+      setTimeout(() => {
+
+        openPolygon();
+      }, 500);
+    } else if ( booleanCube == 1) {
+
+      closeCube();
+
+      setTimeout(() => {
+
+        openPolygon();
+      }, 500);
+    }
   }
-
 });
 
 buttonCube.addEventListener("click", () => {
   if (onlyOne == 0) {
-
     if (booleanCube == 0) {
-      cubeContent1.classList.toggle("go-down1-cube");
 
-      setTimeout(() => {
-        cubeContent2.classList.toggle("go-down2-cube");
-      }, 500);
-
-      booleanCube = 1;
-      onlyOne = 1;
+      openCube();
     }
-
-    buttonCube.classList.toggle("rotateButton");
 
   } else if (onlyOne == 1 && booleanCube == 1) {
 
-    document.getElementById('cube-lado').value = undefined;
-    document.getElementById('cube-result-perimeter').innerText = '';
-    document.getElementById('cube-result-area').innerText = '';
-
-    cubeContent2.classList.toggle("go-down2-cube");
-
-      setTimeout(() => {
-        cubeContent1.classList.toggle("go-down1-cube");
-
-      }, 500);
-
-      booleanCube = 0;
-      onlyOne = 0;
-      buttonCube.classList.toggle("rotateButton");
-
+    closeCube();
   } else {
-      const title = document.getElementById('cube-title');
-      title.innerText = 'Cierre la otra calculadora';
-      title.classList.toggle('color-red');
+    if(booleanRectangle == 1) {
+
+      closeRectangle();
 
       setTimeout(() => {
-        title.innerText = 'Calculadora de Cuadrados';
-        title.classList.toggle('color-red');
 
-      }, 1500);
+        openCube();
+      }, 500);
+    } else if (booleanElypse == 1) {
+
+      closeElypse();
+
+      setTimeout(() => {
+
+        openCube();
+      }, 500);
+    } else if (booleanPolygon == 1) {
+
+      closePolygon();
+
+      setTimeout(() => {
+
+        openCube();
+      }, 500);
+      
+    }
   }
-
- 
 });
