@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../fonts/Gilroy-SemiBold.otf');
+}
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/Gilroy-Regular.otf');
+}
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.otf');
+}
+
+$font-family-title: 'Gilroy-Bold';
+$font-family-subtitle: 'Gilroy-SemiBold';
+$font-family-paragraph: 'Gilroy-Regular';
+
+$background-color: #A8DADC;
+$content-color: #F1FAEE;
+$header-footer-color: #1D3557;
+$font-color: #000000;
+$secondary-content-color: #E6EDE3;
+
+.main {
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 400ms all;
+    padding: 2.5rem 2rem;
+}
+
+.main__content--first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $content-color;
+    height: 13rem;
+    width: 37.4rem; 
+    border: .1rem solid rgba($color: #000000, $alpha: .8);
+    justify-content: center;
+
+    h5 {
+        font-size: 2.8rem;
+        margin:  0;
+        text-align: center;
+        font-family: $font-family-subtitle;
+        position: relative;
+        top: -1rem;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        font-family: $font-family-subtitle;
+        font-size: 2.6rem;
+    }
+
+    input {
+        height: 2.6rem;
+        width: 12rem;
+        font-family: $font-family-subtitle;
+        font-size: 2.3rem;
+        margin-left: 1rem;
+    }
+}
+
+.main__content--second {
+    display: flex;
+    background-color: transparent;
+    margin: 0;
+    width: 37.3rem;
+
+    .second__divisor {
+        background-color: $secondary-content-color;
+        margin: 0;
+        border: .1rem solid rgba($color: #000000, $alpha: .8);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .second__divisor--inputs {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            align-items: center;
+
+            div {
+                display: flex;
+                padding: .7rem;
+                align-items: center;
+
+                label {
+                    font-family: $font-family-subtitle;
+                    font-size: 2.3rem;
+                    margin-left: 1rem;
+
+                    color: #000000;
+                    padding: .8rem .5rem;
+                    padding-left: 4rem;
+                    display: inline-block;
+                    cursor: pointer;
+                    position: relative;
+                    transition: 400ms all ease;
+                }
+
+                label::before {
+                    content: '';
+                    width: 2rem;
+                    height: 2rem;
+                    display: inline-block;
+                    background-color: none;
+                    border: .3rem solid #000000;
+                    position: absolute;
+                    left: 1rem;
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                input[type="radio"]:checked + label {
+                    padding: .8rem .5rem;
+                    background-color: rgba($color: $header-footer-color, $alpha: .8);
+                    color: #fff;
+                    border-radius: 2rem;
+                    width: 10rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                input[type="radio"]:checked + label:before {
+                    display: none;
+                }
+            }
+        }
+
+        
+    }
+
+    .second__divisor--cupon {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+
+        label {
+            font-family: $font-family-subtitle;
+            font-size: 2.2rem;
+        }
+    
+        input {
+            height: 2.2rem;
+            width: 12rem;
+            font-family: $font-family-paragraph;
+            font-size: 2.2rem;
+            margin-left: 1rem;
+            text-transform: lowercase;
+        }
+    }
+
+    img {
+        width: 4.5rem;
+        height: 4rem;
+    }
+}
+
+.main__content--third {
+    display: flex;
+    background-color: transparent;
+    margin: 0;
+    width: 29.5rem;
+
+    .third__divisor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary-content-color;
+        height: 8rem;
+        width: 100%;
+        margin: 0;
+        border: .1rem solid rgba($color: #000000, $alpha: .8);
+
+
+        strong {
+            font-size: 2.6rem;
+            margin:  0;
+            text-align: center;
+            font-family: $font-family-subtitle;
+        }
+    }
+
+    img {
+        width: 4.5rem;
+        height: 4rem;
+    }
+
+    
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Maths</title>
+
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/figures.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__content">
+        <div class="header__content--title">
+          <img src="./img/blockchain.svg" alt="JS Maths Icon" />
+          <h1>JS Maths</h1>
+        </div>
+        <img
+          src="./img/menu1.svg"
+          alt="Menu bar"
+          class="header__content--menu"
+          id="menu"
+        />
+      </section>
+      <section class="header__content--secondary">
+        <img src="./img/jschallenge.svg" alt="JS Challenge Logo" />
+        <h2>Figuras geométricas</h2>
+      </section>
+    </header>
+
+    <nav class="nav" id="nav">
+      <section class="nav__content">
+        <div><a href="index.html">Home</a></div>
+      </section>
+      <section class="nav__content">
+        <div class="selected">
+          <a href="figures.html" class="a--secondary">Figuras geométricas</a>
+        </div>
+      </section>
+      <section class="nav__content">
+        <div><a href="percentages.html" class="a--secondary">Porcentajes...</a></div>
+      </section>
+      <section class="nav__content">
+        <div><a href="#" class="a--secondary">Estadísticas...</a></div>
+      </section>
+      <section class="nav__content">
+        <div><a href="#" class="a--secondary">Análisis salarial</a></div>
+      </section>
+      <section class="nav__content">
+        <div><a href="about.html" class="a--secondary">Acerca de</a></div>
+      </section>
+      <section class="nav__content">
+        <div class="nav__content--last" id="arrow-up">
+          <img src="./img/arrow-up.svg" alt="Arrow to close the menu" />
+        </div>
+      </section>
+    </nav>
+
+    <main class="main">
+
+      <section class="main__content rectangle">
+
+        <div class="main__content--presentation">
+          <header class="main__content--header">
+            <img src="./img/rectangle-js.svg" alt="" />
+            <h5 id="rectangle-title">Calculadora de Rectángulos</h5>
+          </header>
+          <nav class="main__content--nav">
+                <div>
+                  <img src="./img/arrow-down.svg" alt="" class="underline-button" id="rectangle-button"/>
+                </div>
+          </nav>
+        </div>
+
+        <div class="main__content--first-display" id="rectangleContent1">
+            <img src="./img/left-polygon.svg" alt="Decoración">
+            <div class="main__content--first-display--content">
+                <div>
+                    <label for="rectangle-lado">Lado (cm):</label>
+                    <input type="number" id="rectangle-lado" onkeyup="calcRectangle()">
+                </div>
+                <div>
+                    <label for="rectangle-base">Base (cm):</label>
+                    <input type="number" id="rectangle-base" onkeyup="calcRectangle()">
+                </div>
+            </div>
+            <img src="./img/right-polygon.svg" alt="Decoración">
+        </div>
+        <div class="main__content--second-display" id="rectangleContent2">
+            <img src="./img/left-polygon.svg" alt="Decoración">
+            <div class="main__content--second-display--content">
+                <div>
+                    <strong>Perímetro:</strong><p id="rectangle-result-perimeter"></p>
+                </div>
+                <div>
+                    <strong>Área:</strong><p id="rectangle-result-area"></p>
+                </div>
+            </div>
+            <img src="./img/right-polygon.svg" alt="Decoración">
+        </div>
+      </section>
+
+      <section class="main__content elypse" id="elypse">
+        <div class="main__content--presentation">
+          <header class="main__content--header">
+            <img src="./img/elypse-icon.svg" alt="" />
+            <h5 id="elypse-title">Calculadora de Cicunferencias</h5>
+          </header>
+          <nav class="main__content--nav">
+            <div>            
+              <img src="./img/arrow-down.svg" alt="" class="underline-button" id="elypse-button"/>
+            </div>
+          </nav>
+        </div>
+
+        <div class="main__content--first-display" id="elypseContent1">
+          <img src="./img/left-polygon.svg" alt="Decoración">
+          <div class="main__content--first-display--content">
+              <div>
+                  <label for="elypse-radio">Radio (cm):</label>
+                  <input type="number" id="elypse-radio" onkeyup="calcElypse()">
+              </div>
+          </div>
+          <img src="./img/right-polygon.svg" alt="Decoración">
+      </div>
+      <div class="main__content--second-display--elypse" id="elypseContent2">
+          <img src="./img/left-polygon.svg" alt="Decoración">
+          <div class="main__content--second-display--content">
+              <div>
+                  <strong>Perímetro:</strong><p id="elypse-result-perimeter"></p>
+              </div>
+              <div>
+                  <strong>Área:</strong><p id="elypse-result-area"></p>
+              </div>
+              <div>
+                <strong>Diametro:</strong><p id="elypse-result-diametro"></p>
+            </div>
+          </div>
+          <img src="./img/right-polygon.svg" alt="Decoración">
+      </div>
+    </section>
+        
+      </section>
+      
+      <section class="main__content polygon" id="polygon">
+
+        <div class="main__content--presentation">
+          <header class="main__content--header">
+            <img src="./img/polygon-icon.svg" alt="" />
+            <h5 id="polygon-title">Calculadora de Triángulos</h5>
+          </header>
+          <nav class="main__content--nav">
+            <div>
+              <img src="./img/arrow-down.svg" alt="" class="underline-button" id="polygon-button" />
+            </div>
+          </nav>
+        </div>
+
+        <div class="main__content--first-display--polygon" id="polygonContent1">
+          <img src="./img/left-polygon.svg" alt="Decoración">
+          <div class="main__content--first-display--content">
+              <div>
+                  <label for="polygon-base">Base (cm):</label>
+                  <input type="number" id="polygon-base" onkeyup="calcPolygon()">
+              </div>
+              <div>
+                <label for="polygon-lado">Lados (cm):</label>
+                <input type="number" id="polygon-lado" onkeyup="calcPolygon()">
+            </div>
+          </div>
+          <img src="./img/right-polygon.svg" alt="Decoración">
+      </div>
+
+      <div class="main__content--second-display--polygon" id="polygonContent2">
+          <img src="./img/left-polygon.svg" alt="Decoración">
+          <div class="main__content--second-display--content">
+              <div>
+                  <strong>Perímetro:</strong><p id="polygon-result-perimeter"></p>
+              </div>
+              <div>
+                  <strong>Altura:</strong><p id="polygon-result-high"></p>
+              </div>
+              <div>
+                <strong>Area:</strong><p id="polygon-result-area"></p>
+            </div>
+          </div>
+          <img src="./img/right-polygon.svg" alt="Decoración">
+      </div>
+      
+      </section>
+
+      <section class="main__content cube" id="cube">
+        <div class="main__content--presentation">
+          <header class="main__content--header">
+            <img src="./img/cube-icon.svg" alt="" />
+            <h5>Calculadora de Cuadrados</h5>
+          </header>
+          <nav class="main__content--nav">
+            <div>
+              <img src="./img/arrow-down.svg" alt="" class="underline-button" id="cube-button"/>
+            </div>    
+          </nav>
+        </div>
+        
+        <div class="main__content--first-display" id="cubeContent1">
+          <img src="./img/left-polygon.svg" alt="Decoración">
+          <div class="main__content--first-display--content">
+              <div>
+                  <label for="cube-lado">Lado (cm):</label>
+                  <input type="number" id="cube-lado" onkeyup="calcCube()">
+              </div>
+          </div>
+          <img src="./img/right-polygon.svg" alt="Decoración">
+      </div>
+      <div class="main__content--second-display--cube" id="cubeContent2">
+          <img src="./img/left-polygon.svg" alt="Decoración">
+          <div class="main__content--second-display--content">
+              <div>
+                  <strong>Perímetro:</strong><p id="cube-result-perimeter"></p>
+              </div>
+              <div>
+                  <strong>Área:</strong><p id="cube-result-area"></p>
+              </div>
+          </div>
+          <img src="./img/right-polygon.svg" alt="Decoración">
+      </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <section class="footer__content">
+        <img src="./img/github-icon.svg" alt="Github logo" />
+        <h4><a href="https://github.com/santiellena">santiellena</a></h4>
+      </section>
+      <section class="footer__content">
+        <img src="./img/platzi-icon.svg" alt="Platzi logo" />
+        <h4><a href="https://platzi.com">Platzi</a></h4>
+      </section>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/movement.js"></script>
+    <script src="./js/calcRectangle.js"></script>
+    <script src="./js/calcElypse.js"></script>
+    <script src="./js/calcPolygon.js"></script>
+    <script src="./js/calcCube.js"></script>
+  </body>
+</html>

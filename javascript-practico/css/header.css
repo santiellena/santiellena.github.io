@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url("../fonts/Gilroy-SemiBold.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url("../fonts/Gilroy-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url("../fonts/Gilroy-Bold.otf");
+}
+
+.header {
+  background-color: #1D3557;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .6rem 1.3rem;
+  border-bottom: 0.1rem solid black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1D3557;
+  z-index: 50;
+}
+
+.header__content .header__content--menu {
+  width: 4.5rem;
+  height: 4rem;
+  padding: 1rem;
+  margin-right: 1.5rem;
+}
+
+.header__content .header__content--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__content .header__content--title h1 {
+  color: #F1FAEE;
+  margin: 0;
+  font-size: 4rem;
+  padding-top: .7rem;
+}
+
+.header__content .header__content--title img {
+  width: 6rem;
+  height: 5rem;
+  margin-right: 1rem;
+}
+
+.header__content--secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.5rem;
+  padding: .6rem 1.3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7rem;
+}
+
+.header__content--secondary img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.5rem;
+  margin-left: .5rem;
+}
+
+.header__content--secondary h2 {
+  color: #F1FAEE;
+  font-size: 3.2rem;
+  margin: 0;
+  padding-top: .7rem;
+}
+/*# sourceMappingURL=header.css.map */

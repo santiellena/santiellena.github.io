@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Maths</title>
+
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    
+</head>
+<body>
+    <header class="header">
+        <section class="header__content">
+            <div class="header__content--title">
+                <img src="./img/blockchain.svg" alt="JS Maths Icon">
+                <h1>JS Maths</h1>
+            </div>
+            <img src="./img/menu1.svg" alt="Menu bar" class="header__content--menu" id="menu">
+        </section>
+        <section class="header__content--secondary">
+            <img src="./img/jschallenge.svg" alt="JS Challenge Logo">
+            <h2>JS Challenge</h2>
+        </section>
+    </header>
+
+    <nav class="nav" id="nav">
+        <section class="nav__content">
+            <div class="selected"><a href="index.html">Home</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="figures.html" class="a--secondary">Figuras geométricas</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="percentages.html" class="a--secondary">Porcentajes...</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="#" class="a--secondary">Estadisticas...</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="#" class="a--secondary">Analisis salarial</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="about.html" class="a--secondary">Acerca de</a></div>
+        </section>
+        <section class="nav__content">
+            <div class="nav__content--last" id="arrow-up">
+                <img src="./img/arrow-up.svg" alt="Arrow to close the menu">
+            </div>
+        </section>
+    </nav>
+
+    <main class="main">
+        <section class="main__content" id="figuresPage" onclick="goToFiguresPage()">
+            <img src="./img/geometry.svg" alt="Geometry section icon">
+            <div class="main__content--title single-content">
+                <h3 class="single">Figuras geométricas</h3>
+                <p class="main__content--description p-single-line">Calcule las medidas de sus figuras, gracias a las matemáticas y a JavaScript</p>
+            </div>
+            
+        </section>
+        <section class="main__content space">
+            <img src="./img/tag.svg" alt="Percentages section icon">
+            <div class="main__content--title">    
+                <h3>Porcentajes y descuentos</h3>
+                <p class="main__content--description">Tus clientes no tienen calculadora? Esta es tu sección</p>
+            </div>
+        </section>
+        <section class="main__content space">
+            <img src="./img/statistics-icon.svg" alt="Average section icon">
+            <div class="main__content--title">
+                <h3>Promedio, mediana y moda</h3>
+                <p class="main__content--description">Esta sección es realmente útil para profesores y estudiantes</p>
+            </div>
+            
+        </section>
+        <section class="main__content space">
+            <img src="./img/salary-icon.svg" alt="Salary analysis section icon">
+            <div class="main__content--title">
+                <h3 class="single">Análisis salarial</h3>
+                <p class="main__content--description p-single-line">Quieres saber acerca del salario promedio de tu país? Y del top 10?</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__content">
+            <img src="./img/github-icon.svg" alt="Github logo">
+            <h4><a href="https://github.com/santiellena">santiellena</a></h4>
+        </section>
+        <section class="footer__content">
+            <img src="./img/platzi-icon.svg" alt="Platzi logo">
+            <h4><a href="https://platzi.com">Platzi</a></h4>
+        </section>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/goTo.js"></script>
+</body>
+</html>

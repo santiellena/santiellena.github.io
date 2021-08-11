@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../fonts/Gilroy-SemiBold.otf');
+}
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/Gilroy-Regular.otf');
+}
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.otf');
+}
+
+$font-family-title: 'Gilroy-Bold';
+$font-family-subtitle: 'Gilroy-SemiBold';
+$font-family-paragraph: 'Gilroy-Regular';
+
+$background-color: #A8DADC;
+$content-color: #F1FAEE;
+$header-footer-color: #1D3557;
+$font-color: #000000;
+
+.nav {
+    background-color: $header-footer-color;
+    border-top: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    transition: transform 250ms ease-in-out;
+    transform: translateY(-150%);
+    z-index: 40;
+    background-color: rgba($color: $header-footer-color, $alpha: 0.98);
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 85%;
+
+    div {
+        width: 90%;
+        border-bottom: .1rem solid #fff;
+
+        .a--secondary {
+            margin: 0;
+            color: $content-color;
+            font-size: 2.3rem;
+            font-weight: 300;
+            text-decoration: none;
+            font-family: $font-family-subtitle;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        a {
+            margin: 0;
+            color: $content-color;
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-decoration: none;
+            font-family: $font-family-subtitle;
+        }
+
+    }
+
+    .nav__content--last {
+       width: 35%;
+    }
+
+}
+
+.selected {
+    background-color: rgba($color: $background-color, $alpha: 0.3);
+    border-radius: .8rem;
+}
+
+.position-menu {
+    transform: translateY(-6.5rem);
+}

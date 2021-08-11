@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../fonts/Gilroy-SemiBold.otf');
+}
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/Gilroy-Regular.otf');
+}
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.otf');
+}
+
+$font-family-title: 'Gilroy-Bold';
+$font-family-subtitle: 'Gilroy-SemiBold';
+$font-family-paragraph: 'Gilroy-Regular';
+
+$background-color: #A8DADC;
+$content-color: #F1FAEE;
+$header-footer-color: #1D3557;
+$font-color: #000000;
+
+.footer {
+    background-color: $header-footer-color;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__content {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    height: 5rem;
+
+    img {
+        height: 4.5rem;
+        width: 4.5rem;
+        margin-right: 1rem;
+    }
+
+    h4 {
+        color: $content-color;
+        margin: 0;
+        font-size: 2.2rem;
+        text-decoration: underline;
+        font-weight: 300;
+
+        a {
+            color: $content-color;
+        }
+    }
+
+}

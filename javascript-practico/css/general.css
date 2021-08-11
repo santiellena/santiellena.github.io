@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url("../fonts/Gilroy-SemiBold.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url("../fonts/Gilroy-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url("../fonts/Gilroy-Bold.otf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #000000;
+}
+
+h1, h2 {
+  font-family: "Gilroy-SemiBold";
+}
+
+h3, h4, h5, h6 {
+  font-family: "Gilroy-SemiBold";
+}
+
+p {
+  font-family: "Gilroy-Regular";
+}
+
+body {
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=general.css.map */

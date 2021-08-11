@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url("../fonts/Gilroy-SemiBold.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url("../fonts/Gilroy-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url("../fonts/Gilroy-Bold.otf");
+}
+
+.main {
+  background-color: #A8DADC;
+  padding: 2.5rem 1.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__content {
+  background-color: #F1FAEE;
+  border: 0.1rem solid rgba(0, 0, 0, 0.6);
+  height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__content img {
+  height: 7rem;
+  width: 7rem;
+  padding: 1rem;
+}
+
+.main__content .main__content--title {
+  margin: 0 1rem;
+}
+
+.main__content .main__content--title h3 {
+  font-size: 3.2rem;
+  margin: 1.2rem 0;
+  font-weight: 300;
+}
+
+.main__content .main__content--title p {
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.main__content .main__content--title .single {
+  margin-top: 1.8rem;
+  font-size: 3rem;
+}
+
+.main__content .single-content {
+  margin: 0 0;
+}
+
+.space {
+  margin-top: 2.2rem;
+}
+/*# sourceMappingURL=main.css.map */

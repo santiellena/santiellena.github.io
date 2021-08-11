@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Maths</title>
+
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/percentages.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    
+</head>
+<body>
+    <header class="header">
+        <section class="header__content">
+            <div class="header__content--title">
+                <img src="./img/blockchain.svg" alt="JS Maths Icon">
+                <h1>JS Maths</h1>
+            </div>
+            <img src="./img/menu1.svg" alt="Menu bar" class="header__content--menu" id="menu">
+        </section>
+        <section class="header__content--secondary">
+            <img src="./img/jschallenge.svg" alt="JS Challenge Logo">
+            <h2>JS Challenge</h2>
+        </section>
+    </header>
+
+    <nav class="nav" id="nav">
+        <section class="nav__content">
+            <div><a href="index.html">Home</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="figures.html" class="a--secondary">Figuras geométricas</a></div>
+        </section>
+        <section class="nav__content">
+            <div class="selected"><a href="percentages.html" class="a--secondary">Porcentajes...</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="#" class="a--secondary">Estadisticas...</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="#" class="a--secondary">Analisis salarial</a></div>
+        </section>
+        <section class="nav__content">
+            <div><a href="about.html" class="a--secondary">Acerca de</a></div>
+        </section>
+        <section class="nav__content">
+            <div class="nav__content--last" id="arrow-up">
+                <img src="./img/arrow-up.svg" alt="Arrow to close the menu">
+            </div>
+        </section>
+    </nav>
+
+   <main class="main">
+        <section class="main__content--first">
+            <h5>Descuentos...</h5>
+            <div>
+                <label for="price-input">Precio:</label>
+                <input type="number" id="price-input">
+            </div>
+        </section>
+        <section class="main__content--second" id="second">
+            <img src="./img/left-polygon.svg" alt="">
+            <div class="second__divisor">
+                 
+                    <form class="second__divisor--inputs" action="" id="chooseDiscount">
+                        <div>
+                            <input type="radio" name="d" id="d10" value="d10" onclick="applyCupon()">
+                            <label for="d10">- 10%</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="d" id="d15" value="d15" onclick="applyCupon()">
+                            <label for="d15">- 15%</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="d" id="d25" value="d25" onclick="applyCupon()">
+                            <label for="d25">- 25%</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="d" id="d50" value="d50" onclick="applyCupon()">
+                            <label for="d50">- 50%</label>
+                        </div>   
+                    </form>  
+               
+                <div class="second__divisor--cupon">
+                    <label for="cupon">Cupon:</label>
+                    <input type="text" id="cupon" onkeyup="applyPersonalizedCupon()">
+                </div>
+                
+            </div>
+            <img src="./img/right-polygon.svg" alt="">
+        </section>
+        <section class="main__content--third" id="third">
+            <img src="./img/left-polygon.svg" alt="">
+            <div class="third__divisor">
+                <strong>$</strong><strong id="result"></strong>
+            </div>
+            <img src="./img/right-polygon.svg" alt="">
+        </section>
+   </main>
+
+    <footer class="footer">
+        <section class="footer__content">
+            <img src="./img/github-icon.svg" alt="Github logo">
+            <h4><a href="https://github.com/santiellena">santiellena</a></h4>
+        </section>
+        <section class="footer__content">
+            <img src="./img/platzi-icon.svg" alt="Platzi logo">
+            <h4><a href="https://platzi.com">Platzi</a></h4>
+        </section>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/movementPercentages.js"></script>
+    <script src="./js/discounts.js"></script>
+</body>
+</html>

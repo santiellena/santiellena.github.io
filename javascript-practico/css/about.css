@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url("../fonts/Gilroy-SemiBold.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url("../fonts/Gilroy-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url("../fonts/Gilroy-Bold.otf");
+}
+
+.about {
+  background-color: #A8DADC;
+  margin: 0;
+  padding: 2rem;
+}
+
+.about p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.about li {
+  font-family: "Gilroy-Regular";
+  font-size: 1.6rem;
+}
+
+.about a {
+  text-decoration: none;
+}
+
+.about .about__content {
+  background-color: #F1FAEE;
+  padding: 2.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.6);
+}
+/*# sourceMappingURL=about.css.map */
